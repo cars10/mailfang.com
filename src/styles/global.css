@@ -3,6 +3,7 @@
 
 @theme {
     --default-font-family: 'Roboto', sans-serif;
+    --default-font-size: 15px;
     --default-font-optical-sizing: auto;
     --default-font-weight: 400;
     --default-font-style: normal;
@@ -44,4 +45,121 @@
     @apply bg-gray-700;
     @apply hover:bg-gray-800;
     @apply text-white;
+  }
+
+  @keyframes word-scroll-1 {
+    0% {
+      transform: translateY(0);
+      color: rgb(156 163 175);
+    }
+    30% {
+      transform: translateY(0);
+      color: rgb(156 163 175);
+    }
+    33.33% {
+      transform: translateY(2rem);
+      color: rgb(107 114 128);
+    }
+    63.33% {
+      transform: translateY(2rem);
+      color: rgb(107 114 128);
+    }
+    66.66% {
+      transform: translateY(-2rem);
+      color: rgb(107 114 128);
+    }
+    96.66% {
+      transform: translateY(-2rem);
+      color: rgb(107 114 128);
+    }
+    100% {
+      transform: translateY(0);
+      color: rgb(156 163 175);
+    }
+  }
+
+  @keyframes word-scroll-2 {
+    0% {
+      transform: translateY(-2rem);
+      color: rgb(107 114 128);
+    }
+    30% {
+      transform: translateY(-2rem);
+      color: rgb(107 114 128);
+    }
+    33.33% {
+      transform: translateY(0);
+      color: rgb(156 163 175);
+    }
+    63.33% {
+      transform: translateY(0);
+      color: rgb(156 163 175);
+    }
+    66.66% {
+      transform: translateY(2rem);
+      color: rgb(107 114 128);
+    }
+    96.66% {
+      transform: translateY(2rem);
+      color: rgb(107 114 128);
+    }
+    100% {
+      transform: translateY(-2rem);
+      color: rgb(107 114 128);
+    }
+  }
+
+  @keyframes word-scroll-3 {
+    0% {
+      transform: translateY(2rem);
+      color: rgb(107 114 128);
+    }
+    30% {
+      transform: translateY(2rem);
+      color: rgb(107 114 128);
+    }
+    33.33% {
+      transform: translateY(-2rem);
+      color: rgb(107 114 128);
+    }
+    63.33% {
+      transform: translateY(-2rem);
+      color: rgb(107 114 128);
+    }
+    66.66% {
+      transform: translateY(0);
+      color: rgb(156 163 175);
+    }
+    96.66% {
+      transform: translateY(0);
+      color: rgb(156 163 175);
+    }
+    100% {
+      transform: translateY(2rem);
+      color: rgb(107 114 128);
+    }
+  }
+
+  .word-1 {
+    animation: word-scroll-1 9s infinite;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: both;
+    transform: translateY(0);
+    color: rgb(156 163 175);
+  }
+
+  .word-2 {
+    animation: word-scroll-2 9s infinite;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: both;
+    transform: translateY(-2rem);
+    color: rgb(107 114 128);
+  }
+
+  .word-3 {
+    animation: word-scroll-3 9s infinite;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: both;
+    transform: translateY(2rem);
+    color: rgb(107 114 128);
   }
