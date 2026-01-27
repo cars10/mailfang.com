@@ -1,0 +1,32 @@
+---
+import ClipboardIcon from '../assets/icons/clipboard.svg'
+import CheckIcon from '../assets/icons/check.svg'
+
+const { content } = Astro.props
+---
+
+<button
+  class="copy-button hover:bg-gray-700 hover:text-secondary-dark rounded-sm p-1 hover:cursor-pointer"
+  data-content={content}
+>
+  <ClipboardIcon width="24" height="24" class="h-6 clipboard-icon" />
+  <CheckIcon width="24" height="24" class="h-6 check-icon hidden" />
+</button>
+
+<script>
+  const onClick = (button: HTMLButtonElement) => {
+    console.log('clicked')
+    const content = button.getAttribute('data-content') || ''
+    navigator.clipboard.writeText(content)
+    button.querySelector('.clipboard-icon')?.classList.add('hidden')
+    button.querySelector('.check-icon')?.classList.remove('hidden')
+    setTimeout(() => {
+      button.querySelector('.clipboard-icon')?.classList.remove('hidden')
+      button.querySelector('.check-icon')?.classList.add('hidden')
+    }, 2000)
+  }
+
+  document.querySelectorAll('.copy-button').forEach((button) => {
+    button.addEventListener('click', () => onClick(button as HTMLButtonElement))
+  })
+</script>

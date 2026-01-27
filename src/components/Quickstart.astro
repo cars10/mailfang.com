@@ -1,0 +1,67 @@
+---
+import CopyButton from './CopyButton.astro'
+
+const dockerCommand = `docker run -d --name mailfang \r
+           -p 2525:2525 \r
+           -p 3000:3000 \r
+           cars10/mailfang:latest`
+
+const binaryCommand = `./mailfang`
+---
+
+<section class="max-w-1/2 mx-auto mt-30 text-white">
+  <div class="flex flex-row gap-30 mb-30">
+    <div class="w-1/2 bg-gray-800/25 p-8 rounded-md">
+      <h2 class="text-3xl mb-8 font-medium">Docker</h2>
+
+      <p class="mt-4 mb-8">
+        Start the container and expose port <code
+          class="bg-gray-900
+          p-1
+          rounded-sm">2525</code
+        >
+        (smtp) and <code class="bg-gray-900 p-1 rounded-sm">3000</code> (web):
+      </p>
+
+      <div class="bg-gray-950 p-4 rounded-sm shadow-md relative">
+        <pre><code>{dockerCommand}</code></pre>
+
+        <div class="absolute top-1 right-1">
+          <CopyButton content={dockerCommand} />
+        </div>
+      </div>
+    </div>
+
+    <div class="w-1/2 bg-gray-800/25 p-8 rounded-md">
+      <h2 class="text-3xl mb-8 font-medium">Binary</h2>
+
+      <p class="mt-4 mb-8">
+        Download the latest binary from the <a
+          href="https://github.com/cars10/mailfang/releases"
+          class="text-primary"
+          target="_blank">GitHub releases</a
+        > page and run it:
+      </p>
+
+      <div class="bg-gray-950 p-4 rounded-sm shadow-md relative">
+        <pre><code>{binaryCommand}</code></pre>
+
+        <div class="absolute top-1 right-1">
+          <CopyButton content={binaryCommand} />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="text-center">
+      Open the web ui at <a
+        href="http://localhost:3000"
+        class="text-primary"
+        target="_blank">http://localhost:3000</a
+      >
+      and start sending emails to
+      <code class="bg-gray-900 p-1 rounded-sm">localhost:2525</code>.
+    </p>
+  </div>
+</section>
