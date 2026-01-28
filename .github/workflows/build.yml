@@ -34,3 +34,10 @@ jobs:
           push: true
           tags: |
             ghcr.io/cars10/mailfang.com:latest
+
+      - name: deploy
+        run: |
+          curl -X POST https://autodok.cars10k.de/update \
+            -H "Content-Type: application/json" \
+            -H "Authorization: ${{ secrets.AUTODOK_API_KEY }}" \
+            -d '{"container": "mailfang_com", "image": "ghcr.io/cars10/mailfang.com"}'
