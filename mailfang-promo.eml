@@ -8,6 +8,9 @@ From: MailFang <hello@mailfang.com>
 To: emily.davis@yahoo.com
 Subject: Modernize your email stack with MailFang!
 MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----=_Mixed_1_1234567890.1234567890123"
+
+------=_Mixed_1_1234567890.1234567890123
 Content-Type: multipart/alternative; boundary="----=_Part_1_1234567890.1234567890123"
 
 ------=_Part_1_1234567890.1234567890123
@@ -58,12 +61,19 @@ Content-Transfer-Encoding: 7bit
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MailFang - Local Email Testing Tool</title>
+    <style>
+        @media (max-width: 480px) {
+            .outer-wrapper {
+                padding-top: 0 !important;
+            }
+        }
+    </style>
 </head>
 <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f7fa; line-height: 1.6;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f5f7fa; padding: 40px 0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="outer-wrapper" style="background-color: #f5f7fa; padding: 40px 0;">
         <tr>
             <td align="center">
-                <table role="presentation" width="800" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width: 800px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
                     <!-- Header -->
                     <tr>
                         <td style="background: linear-gradient(180deg, #09161a 0%, #1a3a42 100%); padding: 40px 40px 30px; text-align: center;">
@@ -218,3 +228,12 @@ dmc+
 ------=_Part_2_1234567890.1234567890123--
 
 ------=_Part_1_1234567890.1234567890123--
+
+------=_Mixed_1_1234567890.1234567890123
+Content-Type: text/plain; name="note.txt"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="note.txt"
+
+this is an attachment
+
+------=_Mixed_1_1234567890.1234567890123--
