@@ -1,0 +1,220 @@
+Return-Path: <hello@mailfang.com>
+Received: from localhost (localhost [127.0.0.1])
+	by mailfang.local (MailFang) with ESMTP id 20250128000001
+	for <recipient@example.com>; Wed, 28 Jan 2026 12:00:00 +0000
+Message-ID: <20250128120000.12345@mailfang.com>
+Date: Wed, 28 Jan 2026 12:00:00 +0000
+From: MailFang <hello@mailfang.com>
+To: emily.davis@yahoo.com
+Subject: Modernize your email stack with MailFang!
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="----=_Part_1_1234567890.1234567890123"
+
+------=_Part_1_1234567890.1234567890123
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+MailFang - The Email Testing Tool You've Been Waiting For
+
+Test your emails locally during development, deploy in a sandbox, or use in your staging environment instead of sending emails to an external service. Regain control of your data and eliminate unnecessary costs.
+
+KEY FEATURES:
+
+✓ Easy deployment via Docker or single file binary
+✓ View rendered email content, inspect headers, attachments and raw emails
+✓ Preview emails in different viewports and block remote content loading
+✓ Real-time updates in the web UI
+✓ Modern, intuitive interface
+
+QUICK START:
+
+docker run --name mailfang \
+           -p 3000:3000 \
+           -p 2525:2525 \
+           -d cars10/mailfang
+
+Open the web UI on http://localhost:3000 and send emails to localhost:2525.
+
+WHY MAILFANG?
+
+• Local Development: Test emails without external dependencies
+• Data Control: Keep your email data private and secure
+• Cost Effective: No per-email charges or subscription fees
+• Developer Friendly: Simple configuration and deployment
+• Production Ready: Use in staging environments with confidence
+
+Get started today: https://github.com/cars10/mailfang
+
+------=_Part_1_1234567890.1234567890123
+Content-Type: multipart/related; boundary="----=_Part_2_1234567890.1234567890123"
+
+------=_Part_2_1234567890.1234567890123
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailFang - Local Email Testing Tool</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f7fa; line-height: 1.6;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f5f7fa; padding: 40px 0;">
+        <tr>
+            <td align="center">
+                <table role="presentation" width="800" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                    <!-- Header -->
+                    <tr>
+                        <td style="background: linear-gradient(180deg, #09161a 0%, #1a3a42 100%); padding: 40px 40px 30px; text-align: center;">
+                            <div style="display: flex; justify-content: center;gap: 20px;">
+                            <svg fill="none" viewBox="0 0 473.65436 444.45831" version="1.1" id="svg2" width="60" height="60" color="#fff"
+   xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+   <defs id="defs2"></defs>
+   <g stroke="currentColor" stroke-width="8"
+      transform="matrix(1.769,0,0,1.769,-80.950603,-211.97519)" id="g1">
+      <path id="rect1" transform="rotate(15,-201,199.7)"
+         d="M 149.815 161.525 L 112.6 162.1 C 108.168 162.1 104.6 158.532 104.6 154.1 L 104.6 45.4 C 104.6 40.968 108.168 37.4 112.6 37.4 L 277.9 37.4 C 282.332 37.4 285.9 40.968 285.9 45.4 L 285.9 154.1 C 285.9 158.532 281.28 162.382 276.848 162.382"></path>
+      <path stroke-linecap="round" stroke-linejoin="round"
+         d="m 140.49469,130.7255 63.44149,87.39788 c 32.84809,-14.66465 88.98928,-41.4822 98.54427,-43.99392"
+         id="path1"></path>
+   </g>
+   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"
+      d="m 120.8074,365.06001 c 136.97546,41.38808 129.23791,31.83715 201.23669,46.61638 12.93039,2.65423 28.28554,-1.03351 64.32861,26.78208 30.87591,-24.59386 27.52783,-25.68946 77.53345,-67.38608 -40.98713,-58.43513 -75.76817,-75.98733 -102.83977,-117.17202 a 33.4,33.4 0 0 0 -13.87383,-9.99384 L 212.79483,216.31864 c -14.27191,-1.09207 -23.75423,0.84072 -28.70061,5.54214 a 39,39 0 0 0 -7.77234,24.43626 c 2.47829,6.32757 9.96015,12.15094 22.32753,17.54798 l 93.84113,35.18809 c -11.48019,9.17907 -36.70079,24.62321 -48.93366,27.52267 C 230.95025,325.80554 164.96397,316.54807 151.78304,309.1465 112.58468,284.76663 88.952191,277.05719 53.489666,246.91073 35.993991,235.663 32.875382,227.97897 18.735396,235.6933 4.9294978,243.27203 4.0410868,256.05447 8.2134508,272.52994 25.792953,313.7058 80.61914,342.51863 120.8074,365.06001"
+      id="path2"></path>
+</svg>
+                            <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: 500; letter-spacing: -0.5px;">Mail<span style="font-weight: 700">Fang</span></h1>
+                            </div>
+                            <p style="margin: 10px 0 0; color: #a0b8c0; font-size: 16px; font-weight: 400;">Your new email testing tool</p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Main Content -->
+                    <tr>
+                        <td style="padding: 40px;">
+                            <p style="margin: 0 0 24px; color: #2d3748; font-size: 16px; line-height: 1.7;">
+                                Test your emails on your own infrastructure rather than relying on external services. Regain control of your data and eliminate unnecessary costs.
+                            </p>
+                            
+                            <!-- Features Section -->
+                            <div style="background-color: #f7fafc; border-left: 4px solid #09161a; padding: 24px; margin: 32px 0; border-radius: 4px;">
+                                <h2 style="margin: 0 0 20px; color: #09161a; font-size: 22px; font-weight: 600;">Key Features</h2>
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="padding: 8px 0; color: #4a5568; font-size: 15px;">
+                                            <span style="color: #09161a; font-weight: 600; margin-right: 8px;">✓</span>
+                                            Easy deployment via Docker or single file binary
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px 0; color: #4a5568; font-size: 15px;">
+                                            <span style="color: #09161a; font-weight: 600; margin-right: 8px;">✓</span>
+                                            View rendered email content, inspect headers, attachments and raw emails
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px 0; color: #4a5568; font-size: 15px;">
+                                            <span style="color: #09161a; font-weight: 600; margin-right: 8px;">✓</span>
+                                            Preview emails in different viewports and block remote content loading
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px 0; color: #4a5568; font-size: 15px;">
+                                            <span style="color: #09161a; font-weight: 600; margin-right: 8px;">✓</span>
+                                            Real-time updates in the web UI
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px 0; color: #4a5568; font-size: 15px;">
+                                            <span style="color: #09161a; font-weight: 600; margin-right: 8px;">✓</span>
+                                            Modern, intuitive interface
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                           
+                            
+                            <!-- Benefits Grid -->
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top: 32px;">
+                                <tr>
+                                    <td width="50%" style="padding: 0 12px 0 0; vertical-align: top;">
+                                        <div style="padding: 20px; background-color: #f7fafc; border-radius: 6px; height: 100%;">
+                                            <h3 style="margin: 0 0 8px; color: #09161a; font-size: 18px; font-weight: 600;">Data Control</h3>
+                                            <p style="margin: 0; color: #4a5568; font-size: 14px; line-height: 1.6;">Keep your email data private and secure on your own infrastructure.</p>
+                                        </div>
+                                    </td>
+                                    <td width="50%" style="padding: 0 0 0 12px; vertical-align: top;">
+                                        <div style="padding: 20px; background-color: #f7fafc; border-radius: 6px; height: 100%;">
+                                            <h3 style="margin: 0 0 8px; color: #09161a; font-size: 18px; font-weight: 600;">100% Free to use</h3>
+                                            <p style="margin: 0; color: #4a5568; font-size: 14px; line-height: 1.6;">No per-email charges or subscription fees. Deploy once, use forever.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding-top: 12px;">
+                                        <div style="padding: 20px; background-color: #f7fafc; border-radius: 6px;">
+                                            <h3 style="margin: 0 0 8px; color: #09161a; font-size: 18px; font-weight: 600;">Developer Friendly</h3>
+                                            <p style="margin: 0; color: #4a5568; font-size: 14px; line-height: 1.6;">Simple configuration and deployment. Works seamlessly with Rails ActionMailer, Node.js, Python, and more.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
+------=_Part_2_1234567890.1234567890123
+Content-Type: image/svg+xml; name="logo.svg"
+Content-Transfer-Encoding: base64
+Content-ID: <logo>
+Content-Disposition: inline; filename="logo.svg"
+
+PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxz
+dmcKICAgZmlsbD0ibm9uZSIKICAgdmlld0JveD0iMCAwIDQ3My42NTQzNiA0NDQuNDU4MzEiCiAg
+IHZlcnNpb249IjEuMSIKICAgaWQ9InN2ZzIiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8y
+MDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgIDxk
+ZWZzCiAgICAgIGlkPSJkZWZzMiIgLz4KICAgPGcKICAgICAgc3Ryb2tlPSJjdXJyZW50Q29sb3Ii
+CiAgICAgIHN0cm9rZS13aWR0aD0iOCIKICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS43NjksMCww
+LDEuNzY5LC04MC45NTA2MDMsLTIxMS45NzUxOSkiCiAgICAgIGlkPSJnMSI+CiAgICAgIDxwYXRo
+CiAgICAgICAgIGlkPSJyZWN0MSIKICAgICAgICAgdHJhbnNmb3JtPSJyb3RhdGUoMTUsLTIwMSwx
+OTkuNykiCiAgICAgICAgIHN0eWxlPSJmaWxsOiMwOTE2MWEiCiAgICAgICAgIGQ9Im0gMTEyLjYs
+MzcuNDAwMDAyIGggMTY1LjMgYyA0LjQzMiwwIDgsMy41NjggOCw4IFYgMTU0LjEgYyAwLDQuNDMy
+IC0zLjU2OCw4IC04LDggSCAxMTIuNiBjIC00LjQzMiwwIC04LC0zLjU2OCAtOCwtOCBWIDQ1LjQw
+MDAwMiBjIDAsLTQuNDMyIDMuNTY4LC04IDgsLTggeiIgLz4KICAgICAgPHBhdGgKICAgICAgICAg
+c3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogICAgICAgICBzdHJva2UtbGluZWpvaW49InJvdW5kIgog
+ICAgICAgICBkPSJtIDE0MC40OTQ2OSwxMzAuNzI1NSA2My40NDE0OSw4Ny4zOTc4OCBjIDMyLjg0
+ODA5LC0xNC42NjQ2NSA4OC45ODkyOCwtNDEuNDgyMiA5OC41NDQyNywtNDMuOTkzOTIiCiAgICAg
+ICAgIGlkPSJwYXRoMSIgLz4KICAgPC9nPgogICA8cGF0aAogICAgICBmaWxsPSIjMDkxNjFhIgog
+ICAgICBzdHJva2U9ImN1cnJlbnRDb2xvciIKICAgICAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgog
+ICAgICBzdHJva2UtbGluZWpvaW49InJvdW5kIgogICAgICBzdHJva2Utd2lkdGg9IjEyIgogICAg
+ICBkPSJtIDEyMC44MDc0LDM2NS4wNjAwMSBjIDEzNi45NzU0Niw0MS4zODgwOCAxMjkuMjM3OTEs
+MzEuODM3MTUgMjAxLjIzNjY5LDQ2LjYxNjM4IDEyLjkzMDM5LDIuNjU0MjMgMjguMjg1NTQsLTEu
+MDMzNTEgNjQuMzI4NjEsMjYuNzgyMDggMzAuODc1OTEsLTI0LjU5Mzg2IDI3LjUyNzgzLC0yNS42
+ODk0NiA3Ny41MzM0NSwtNjcuMzg2MDggLTQwLjk4NzEzLC01OC40MzUxMyAtNzUuNzY4MTcsLTc1
+Ljk4NzMzIC0xMDIuODM5NzcsLTExNy4xNzIwMiBhIDMzLjQsMzMuNCAwIDAgMCAtMTMuODczODMs
+LTkuOTkzODQgTCAyMTIuNzk0ODMsMjE2LjMxODY0IGMgLTE0LjI3MTkxLC0xLjA5MjA3IC0yMy43
+NTQyMywwLjg0MDcyIC0yOC43MDA2MSw1LjU0MjE0IGEgMzksMzkgMCAwIDAgLTcuNzcyMzQsMjQu
+NDM2MjYgYyAyLjQ3ODI5LDYuMzI3NTcgOS45NjAxNSwxMi4xNTA5NCAyMi4zMjc1MywxNy41NDc5
+OCBsIDkzLjg0MTEzLDM1LjE4ODA5IGMgLTExLjQ4MDE5LDkuMTc5MDcgLTM2LjcwMDc5LDI0LjYy
+MzIxIC00OC45MzM2NiwyNy41MjI2NyBDIDIzMC45NTAyNSwzMjUuODA1NTQgMTY0Ljk2Mzk3LDMx
+Ni41NDgwNyAxNTEuNzgzMDQsMzA5LjE0NjUgMTEyLjU4NDY4LDI4NC43NjY2MyA4OC45NTIxOTEs
+Mjc3LjA1NzE5IDUzLjQ4OTY2NiwyNDYuOTEwNzMgMzUuOTkzOTkxLDIzNS42NjMgMzIuODc1Mzgy
+LDIyNy45Nzg5NyAxOC43MzUzOTYsMjM1LjY5MzMgNC45Mjk0OTc4LDI0My4yNzIwMyA0LjA0MTA4
+NjgsMjU2LjA1NDQ3IDguMjEzNDUwOCwyNzIuNTI5OTQgMjUuNzkyOTUzLDMxMy43MDU4IDgwLjYx
+OTE0LDM0Mi41MTg2MyAxMjAuODA3NCwzNjUuMDYwMDEiCiAgICAgIGlkPSJwYXRoMiIgLz4KPC9z
+dmc+
+
+------=_Part_2_1234567890.1234567890123--
+
+------=_Part_1_1234567890.1234567890123--

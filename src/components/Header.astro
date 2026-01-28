@@ -1,5 +1,6 @@
 ---
 import Logo from '../assets/logo.svg'
+import ArrowUpRightIcon from '../assets/icons/arrow_up_right.svg'
 ---
 
 <div class="max-w-1/2 mx-auto py-8">
@@ -16,9 +17,21 @@ import Logo from '../assets/logo.svg'
       role="navigation"
     >
       <a href="/quickstart" class="hover:text-primary">Quickstart</a>
-      <a href="/demo" class="hover:text-primary">Demo</a>
-      <a href="https://github.com/mailfang" class="hover:text-primary">GitHub</a
+      <a
+        href="/demo"
+        class="hover:text-primary flex flex-row gap-2 items-center"
+        target="_blank"
       >
+        Demo
+        <ArrowUpRightIcon class="size-4" />
+      </a>
+      <a
+        href="https://github.com/cars10/mailfang"
+        class="hover:text-primary flex flex-row gap-2 items-center"
+        target="_blank"
+      >
+        GitHub <ArrowUpRightIcon class="size-4" />
+      </a>
     </div>
   </div>
 </div>
