@@ -1,5 +1,6 @@
 ---
 import CopyButton from './CopyButton.astro'
+import WordCarousel from './WordCarousel.astro'
 
 const dockerCommand = `docker run -d --name mailfang \r
            -p 2525:2525 \r
@@ -9,7 +10,9 @@ const dockerCommand = `docker run -d --name mailfang \r
 const binaryCommand = `./mailfang`
 ---
 
-<section class="max-w-1/2 mx-auto mt-30 text-white">
+<section class="max-w-1/2 mx-auto mt-20 text-white">
+  <WordCarousel />
+
   <div class="flex flex-row gap-30 mb-30">
     <div class="w-1/2 bg-gray-800/25 p-8 rounded-md">
       <h2 class="text-3xl mb-8 font-medium">Docker</h2>

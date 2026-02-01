@@ -15,7 +15,6 @@ const { content } = Astro.props
 
 <script>
   const onClick = (button: HTMLButtonElement) => {
-    console.log('clicked')
     const content = button.getAttribute('data-content') || ''
     navigator.clipboard.writeText(content)
     button.querySelector('.clipboard-icon')?.classList.add('hidden')

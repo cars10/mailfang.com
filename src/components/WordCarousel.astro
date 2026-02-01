@@ -1,0 +1,66 @@
+<div class="flex flex-row justify-center my-20">
+  <div class="text-2xl font-light leading-12 text-gray-400 flex flex-row gap-2">
+    <div>Built for your</div>
+    <div
+      class="relative w-34 min-w-34 flex items-center justify-center h-10 pt-2 overflow-y-hidden"
+    >
+      <div style="--i:1" class="word absolute whitespace-nowrap">
+        development
+      </div>
+      <div style="--i:2" class="word absolute whitespace-nowrap">staging</div>
+      <div style="--i:3" class="word absolute whitespace-nowrap">testing</div>
+      <div style="--i:4" class="word absolute whitespace-nowrap">demo</div>
+      <div style="--i:5" class="word absolute whitespace-nowrap">sandbox</div>
+    </div>
+    <div>environment.</div>
+  </div>
+</div>
+
+<style>
+  :root {
+    --n: 5; /* Total number of words */
+    --duration: 15s; /* Total loop time */
+  }
+
+  .word {
+    opacity: 0;
+    transform: translateY(-2rem);
+    animation: word-scroll var(--duration) infinite;
+    /* The magic formula: (index - 1) * (total time / total words) */
+    /* We multiply by -1 to "pre-start" the animation so there's no delay on load */
+    animation-delay: calc((var(--i) - 1) * (var(--duration) / var(--n)) * -1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes word-scroll {
+    0% {
+      transform: translateY(-2rem);
+      opacity: 0;
+      color: rgb(107 114 128);
+    }
+    /* 5% of the total time: Word has fully slid in */
+    5% {
+      transform: translateY(0);
+      opacity: 1;
+      color: rgb(156 163 175);
+    }
+    /* 15% of the total time: Word starts sliding out */
+    15% {
+      transform: translateY(0);
+      opacity: 1;
+      color: rgb(156 163 175);
+    }
+    /* 20% of the total time: Word is fully gone at the bottom */
+    20% {
+      transform: translateY(2rem);
+      opacity: 0;
+      color: rgb(107 114 128);
+    }
+    /* 20.01% to 100%: The word stays hidden and "resets" to the top position */
+    21%,
+    100% {
+      transform: translateY(-2rem);
+      opacity: 0;
+    }
+  }
+</style>
