@@ -1,5 +1,6 @@
 ---
 import CopyButton from './CopyButton.astro'
+import WordCarousel from './WordCarousel.astro'
 
 const dockerCommand = `docker run -d --name mailfang \r
            -p 2525:2525 \r
@@ -9,9 +10,11 @@ const dockerCommand = `docker run -d --name mailfang \r
 const binaryCommand = `./mailfang`
 ---
 
-<section class="max-w-1/2 mx-auto mt-30 text-white">
-  <div class="flex flex-row gap-30 mb-30">
-    <div class="w-1/2 bg-gray-800/25 p-8 rounded-md">
+<div class="p-4 md:max-w-1/2 mx-auto md:mt-20 text-white h-full">
+  <div class="flex flex-col md:flex-row gap-10 md:gap-30 mb-10 md:mb-30">
+    <div
+      class="md:w-1/2 bg-gray-800/25 p-4 md:p-8 rounded-md border border-gray-700"
+    >
       <h2 class="text-3xl mb-8 font-medium">Docker</h2>
 
       <p class="mt-4 mb-8">
@@ -24,7 +27,7 @@ const binaryCommand = `./mailfang`
       </p>
 
       <div class="bg-gray-950 p-4 rounded-sm shadow-md relative">
-        <pre><code>{dockerCommand}</code></pre>
+        <pre class="overflow-x-auto"><code>{dockerCommand}</code></pre>
 
         <div class="absolute top-1 right-1">
           <CopyButton content={dockerCommand} />
@@ -32,7 +35,9 @@ const binaryCommand = `./mailfang`
       </div>
     </div>
 
-    <div class="w-1/2 bg-gray-800/25 p-8 rounded-md">
+    <div
+      class="md:w-1/2 bg-gray-800/25 p-4 md:p-8 rounded-md border border-gray-700"
+    >
       <h2 class="text-3xl mb-8 font-medium">Binary</h2>
 
       <p class="mt-4 mb-8">
@@ -44,7 +49,7 @@ const binaryCommand = `./mailfang`
       </p>
 
       <div class="bg-gray-950 p-4 rounded-sm shadow-md relative">
-        <pre><code>{binaryCommand}</code></pre>
+        <pre class="overflow-x-auto"><code>{binaryCommand}</code></pre>
 
         <div class="absolute top-1 right-1">
           <CopyButton content={binaryCommand} />
@@ -53,7 +58,7 @@ const binaryCommand = `./mailfang`
     </div>
   </div>
 
-  <div>
+  <div class="mb-20">
     <p class="text-center">
       Open the web ui at <a
         href="http://localhost:3000"
@@ -64,4 +69,4 @@ const binaryCommand = `./mailfang`
       <code class="bg-gray-900 p-1 rounded-sm">localhost:2525</code>.
     </p>
   </div>
-</section>
+</div>

@@ -15,8 +15,7 @@
 html,
 body {
   margin: 0;
-  width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -45,50 +44,4 @@ body {
   @apply bg-gray-700;
   @apply hover:bg-gray-800;
   @apply text-white;
-}
-
-:root {
-  --n: 5;            /* Total number of words */
-  --duration: 10s;   /* Total loop time */
-}
-
-.word {
-  opacity: 0;
-  transform: translateY(-2rem);
-  animation: word-scroll var(--duration) infinite;
-  /* The magic formula: (index - 1) * (total time / total words) */
-  /* We multiply by -1 to "pre-start" the animation so there's no delay on load */
-  animation-delay: calc((var(--i) - 1) * (var(--duration) / var(--n)) * -1);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes word-scroll {
-  0% {
-    transform: translateY(-2rem);
-    opacity: 0;
-    color: rgb(107 114 128);
-  }
-  /* 5% of the total time: Word has fully slid in */
-  5% {
-    transform: translateY(0);
-    opacity: 1;
-    color: rgb(156 163 175);
-  }
-  /* 15% of the total time: Word starts sliding out */
-  15% {
-    transform: translateY(0);
-    opacity: 1;
-    color: rgb(156 163 175);
-  }
-  /* 20% of the total time: Word is fully gone at the bottom */
-  20% {
-    transform: translateY(2rem);
-    opacity: 0;
-    color: rgb(107 114 128);
-  }
-  /* 20.01% to 100%: The word stays hidden and "resets" to the top position */
-  21%, 100% {
-    transform: translateY(-2rem);
-    opacity: 0;
-  }
 }
