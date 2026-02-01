@@ -1,0 +1,22 @@
+---
+import ViewImage from '../assets/images/view.png'
+
+const {
+  title = 'MailFang',
+  description = 'MailFang is a local email testing tool',
+} = Astro.props
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="generator" content={Astro.generator} />
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta property="og:title" content={title} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mailfang.com" />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ViewImage.src} />
+<meta property="og:image:alt" content="" />

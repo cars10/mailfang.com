@@ -1,16 +1,13 @@
 ---
 import '../styles/global.css'
 import Header from '../components/Header.astro'
+import Head from './Head.astro'
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>MailFang</title>
+    <Head />
   </head>
   <body>
     <script
@@ -19,7 +16,7 @@ import Header from '../components/Header.astro'
       data-website-id="3faafbc0-008e-4059-ae70-f68048546980"
       data-do-not-track="true"
       data-domains="mailfang.com"></script>
-    <main class="h-full overflow-y-hidden">
+    <main class="h-full">
       <Header />
       <slot />
     </main>
