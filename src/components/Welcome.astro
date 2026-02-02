@@ -1,6 +1,6 @@
 ---
-import { Image } from 'astro:assets'
-import ViewImage from '../assets/images/view.png'
+const demoHost = import.meta.env.NODE_ENV === 'development' ? 'http://localhost:5173' : 'https://demo.mailfang.com'
+const demoPath = `${demoHost}/redirect_first_email?reduced=true&demo=true`
 ---
 
 <div class="flex flex-col md:flex-row">
@@ -30,16 +30,7 @@ import ViewImage from '../assets/images/view.png'
     </div>
   </section>
 
-  <section class="p-4 md:w-1/2 mt-10 md:mt-60">
-    <Image
-      src={ViewImage}
-      alt="MailFang List"
-      width={900}
-      height={1200}
-      quality={100}
-      priority
-      format="png"
-      class="shadow-md rounded-sm md:h-max md:max-w-max"
-    />
+  <section class="p-4 md:w-1/2 mt-10 md:mt-26">
+    <iframe src={demoPath} class="w-full md:w-200 h-200 bg-white rounded-sm"></iframe>
   </section>
 </div>
