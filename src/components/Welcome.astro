@@ -1,5 +1,8 @@
 ---
-const demoHost = import.meta.env.NODE_ENV === 'development' ? 'http://localhost:5173' : 'https://demo.mailfang.com'
+const demoHost =
+  import.meta.env.NODE_ENV === 'development'
+    ? 'http://localhost:5173'
+    : 'https://demo.mailfang.com'
 const demoPath = `${demoHost}/redirect_first_email?reduced=true&demo=true`
 ---
 
@@ -31,6 +34,7 @@ const demoPath = `${demoHost}/redirect_first_email?reduced=true&demo=true`
   </section>
 
   <section class="p-4 md:w-1/2 mt-10 md:mt-26">
-    <iframe src={demoPath} class="w-full md:w-200 h-200 bg-white rounded-sm"></iframe>
+    <iframe src={demoPath} class="w-full md:w-200 h-200 bg-white rounded-sm"
+    ></iframe>
   </section>
 </div>
