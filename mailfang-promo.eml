@@ -76,8 +76,8 @@ Content-Transfer-Encoding: 7bit
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width: 800px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
                     <!-- Header -->
                     <tr>
-                        <td style="background: linear-gradient(180deg, #09161a 0%, #1a3a42 100%); padding: 40px 40px 30px; text-align: center;">
-                            <img src="/mailfang_panner.png" />
+                        <td style="background: linear-gradient(180deg, #09161a 0%, #1a3a42 100%); text-align: center; color:#fff; ">
+                            <img src="https://mailfang.com/mailfang_banner.png" height="190" alt="MailFang Banner" style="min-height:150px;" />
                         </td>
                     </tr>
                     
@@ -166,47 +166,6 @@ Content-Transfer-Encoding: 7bit
 </body>
 </html>
 
-------=_Part_2_1234567890.1234567890123
-Content-Type: image/svg+xml; name="logo.svg"
-Content-Transfer-Encoding: base64
-Content-ID: <logo>
-Content-Disposition: inline; filename="logo.svg"
-
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxz
-dmcKICAgZmlsbD0ibm9uZSIKICAgdmlld0JveD0iMCAwIDQ3My42NTQzNiA0NDQuNDU4MzEiCiAg
-IHZlcnNpb249IjEuMSIKICAgaWQ9InN2ZzIiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8y
-MDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgIDxk
-ZWZzCiAgICAgIGlkPSJkZWZzMiIgLz4KICAgPGcKICAgICAgc3Ryb2tlPSJjdXJyZW50Q29sb3Ii
-CiAgICAgIHN0cm9rZS13aWR0aD0iOCIKICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS43NjksMCww
-LDEuNzY5LC04MC45NTA2MDMsLTIxMS45NzUxOSkiCiAgICAgIGlkPSJnMSI+CiAgICAgIDxwYXRo
-CiAgICAgICAgIGlkPSJyZWN0MSIKICAgICAgICAgdHJhbnNmb3JtPSJyb3RhdGUoMTUsLTIwMSwx
-OTkuNykiCiAgICAgICAgIHN0eWxlPSJmaWxsOiMwOTE2MWEiCiAgICAgICAgIGQ9Im0gMTEyLjYs
-MzcuNDAwMDAyIGggMTY1LjMgYyA0LjQzMiwwIDgsMy41NjggOCw4IFYgMTU0LjEgYyAwLDQuNDMy
-IC0zLjU2OCw4IC04LDggSCAxMTIuNiBjIC00LjQzMiwwIC04LC0zLjU2OCAtOCwtOCBWIDQ1LjQw
-MDAwMiBjIDAsLTQuNDMyIDMuNTY4LC04IDgsLTggeiIgLz4KICAgICAgPHBhdGgKICAgICAgICAg
-c3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogICAgICAgICBzdHJva2UtbGluZWpvaW49InJvdW5kIgog
-ICAgICAgICBkPSJtIDE0MC40OTQ2OSwxMzAuNzI1NSA2My40NDE0OSw4Ny4zOTc4OCBjIDMyLjg0
-ODA5LC0xNC42NjQ2NSA4OC45ODkyOCwtNDEuNDgyMiA5OC41NDQyNywtNDMuOTkzOTIiCiAgICAg
-ICAgIGlkPSJwYXRoMSIgLz4KICAgPC9nPgogICA8cGF0aAogICAgICBmaWxsPSIjMDkxNjFhIgog
-ICAgICBzdHJva2U9ImN1cnJlbnRDb2xvciIKICAgICAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgog
-ICAgICBzdHJva2UtbGluZWpvaW49InJvdW5kIgogICAgICBzdHJva2Utd2lkdGg9IjEyIgogICAg
-ICBkPSJtIDEyMC44MDc0LDM2NS4wNjAwMSBjIDEzNi45NzU0Niw0MS4zODgwOCAxMjkuMjM3OTEs
-MzEuODM3MTUgMjAxLjIzNjY5LDQ2LjYxNjM4IDEyLjkzMDM5LDIuNjU0MjMgMjguMjg1NTQsLTEu
-MDMzNTEgNjQuMzI4NjEsMjYuNzgyMDggMzAuODc1OTEsLTI0LjU5Mzg2IDI3LjUyNzgzLC0yNS42
-ODk0NiA3Ny41MzM0NSwtNjcuMzg2MDggLTQwLjk4NzEzLC01OC40MzUxMyAtNzUuNzY4MTcsLTc1
-Ljk4NzMzIC0xMDIuODM5NzcsLTExNy4xNzIwMiBhIDMzLjQsMzMuNCAwIDAgMCAtMTMuODczODMs
-LTkuOTkzODQgTCAyMTIuNzk0ODMsMjE2LjMxODY0IGMgLTE0LjI3MTkxLC0xLjA5MjA3IC0yMy43
-NTQyMywwLjg0MDcyIC0yOC43MDA2MSw1LjU0MjE0IGEgMzksMzkgMCAwIDAgLTcuNzcyMzQsMjQu
-NDM2MjYgYyAyLjQ3ODI5LDYuMzI3NTcgOS45NjAxNSwxMi4xNTA5NCAyMi4zMjc1MywxNy41NDc5
-OCBsIDkzLjg0MTEzLDM1LjE4ODA5IGMgLTExLjQ4MDE5LDkuMTc5MDcgLTM2LjcwMDc5LDI0LjYy
-MzIxIC00OC45MzM2NiwyNy41MjI2NyBDIDIzMC45NTAyNSwzMjUuODA1NTQgMTY0Ljk2Mzk3LDMx
-Ni41NDgwNyAxNTEuNzgzMDQsMzA5LjE0NjUgMTEyLjU4NDY4LDI4NC43NjY2MyA4OC45NTIxOTEs
-Mjc3LjA1NzE5IDUzLjQ4OTY2NiwyNDYuOTEwNzMgMzUuOTkzOTkxLDIzNS42NjMgMzIuODc1Mzgy
-LDIyNy45Nzg5NyAxOC43MzUzOTYsMjM1LjY5MzMgNC45Mjk0OTc4LDI0My4yNzIwMyA0LjA0MTA4
-NjgsMjU2LjA1NDQ3IDguMjEzNDUwOCwyNzIuNTI5OTQgMjUuNzkyOTUzLDMxMy43MDU4IDgwLjYx
-OTE0LDM0Mi41MTg2MyAxMjAuODA3NCwzNjUuMDYwMDEiCiAgICAgIGlkPSJwYXRoMiIgLz4KPC9z
-dmc+
-
 ------=_Part_2_1234567890.1234567890123--
 
 ------=_Part_1_1234567890.1234567890123--
@@ -216,6 +175,6 @@ Content-Type: text/plain; name="note.txt"
 Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment; filename="note.txt"
 
-this is an attachment
+This is an attachment called note.txt :)
 
 ------=_Mixed_1_1234567890.1234567890123--
