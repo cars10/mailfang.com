@@ -1,14 +1,22 @@
 ---
+import TypewriterReveal from './TypewriterReveal.astro'
 const demoHost =
   import.meta.env.NODE_ENV === 'development'
     ? 'http://localhost:5173'
     : 'https://demo.mailfang.com'
 const demoPath = `${demoHost}/redirect_first_email?reduced=true&demo=true`
+
+const terminalOutput = `$ docker run -p 3000:3000 -p 2525:2525 cars10/mailfang:latest
+INFO  [main] Database connected
+INFO  [main] Database migrations completed
+INFO  [web] Web server listening on 0.0.0.0:3000 
+INFO  [smtp] SMTP server listening on 0.0.0.0:2525                             
+INFO  [main] MailFang is ready!`
 ---
 
-<div class="flex flex-col md:flex-row min-h-[90svh]">
+<div class="flex flex-col md:flex-row">
   <section
-    class="p-4 md:p-0 mx-auto md:w-1/3 md:mt-30 text-white 1md:overflow-x-hidden md:h-auto flex flex-col justify-between md:justify-normal gap-18"
+    class="p-4 md:p-0 mx-auto md:w-1/3 md:mt-30 text-white md:h-auto flex flex-col justify-between md:justify-normal gap-18"
   >
     <h2 class="text-3xl md:text-5xl">
       Mail<span class="font-bold">Fang</span> is your new <span
@@ -39,5 +47,28 @@ const demoPath = `${demoHost}/redirect_first_email?reduced=true&demo=true`
       src={demoPath}
       class="w-full h-200 bg-white rounded-sm"
       allow="clipboard-write"></iframe>
+  </section>
+</div>
+
+<div class="my-20">
+  <section
+    class="p-4 md:p-0 mx-auto md:w-2/5 md:mt-30 text-white flex flex-col justify-between md:justify-normal gap-18"
+  >
+    <h2 class="text-3xl md:text-5xl border-secondary border-l-4 px-4">
+      Why use Mail<span class="font-bold">Fang</span>?
+    </h2>
+
+    <p class="text-2xl font-light leading-12 text-gray-300 max-w-full">
+      Instead of testing your emails by sending them to an external service (or
+      even worse, to <span class="italic">real</span> users) you can test them on
+      your own infrastructure. Run Mail<span class="font-normal">Fang</span> on your
+      hardware and validate your emails before they reach your users.
+    </p>
+
+    <TypewriterReveal text={terminalOutput} charDelay={20} />
+
+    <div>
+      <a href="/quickstart" class="btn btn-secondary">Quickstart</a>
+    </div>
   </section>
 </div>

@@ -1,0 +1,55 @@
+---
+interface Props {
+  text: string
+  charDelay?: number
+}
+const { text, charDelay = 20 } = Astro.props
+---
+
+<div
+  class="bg-gray-950 p-4 rounded-sm shadow-md relative typewriter-reveal"
+  data-text={text}
+  data-char-delay={charDelay}
+>
+  <div
+    class="typewriter-sizer whitespace-pre-wrap font-mono select-none opacity-0"
+    aria-hidden="true"
+    set:html={text}
+  />
+  <pre
+    class="overflow-x-auto absolute top-4"><code><span class="typewriter-output" aria-live="polite" /></code></pre>
+</div>
+
+<script>
+  function runTypewriter(container: HTMLElement) {
+    const fullText = container.getAttribute('data-text') ?? ''
+    const delay = Number(container.getAttribute('data-char-delay')) || 20
+    const output = container.querySelector('.typewriter-output')
+    if (!output || !fullText) return
+
+    let index = 0
+    const step = () => {
+      if (index >= fullText.length) return
+      index += 1
+      output.textContent = fullText.slice(0, index)
+      if (index < fullText.length) setTimeout(step, delay)
+    }
+    step()
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue
+        const el = entry.target as HTMLElement
+        observer.unobserve(el)
+        runTypewriter(el)
+      }
+    },
+    { rootMargin: '0px', threshold: 0.1 },
+  )
+
+  document
+    .querySelectorAll('.typewriter-reveal')
+    .forEach((el) => observer.observe(el))
+</script>
