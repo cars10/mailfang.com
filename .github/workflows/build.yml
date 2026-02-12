@@ -5,7 +5,7 @@ on:
 
   push:
     branches:
-      - release
+      - main
 
 jobs:
   build:
@@ -22,11 +22,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: martinbeentjes/npm-get-version-action@v1.3.1
-        id: package-version
-        with:
-          path: frontend
 
       - uses: docker/build-push-action@v5
         with:
