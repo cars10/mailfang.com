@@ -10,11 +10,9 @@ import Footer from '../components/Footer.astro'
   <head>
     <Head />
   </head>
-  <body>
-    <main class="h-full">
-      <Header />
-      <slot />
-    </main>
+  <body class="flex flex-col">
+    <Header />
+    <slot />
     <Footer />
     <script
       is:inline

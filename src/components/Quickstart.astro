@@ -9,65 +9,67 @@ const dockerCommand = `docker run -d --name mailfang \r
 const binaryCommand = `./mailfang`
 ---
 
-<div class="p-4 md:max-w-2/3 mx-auto md:mt-20 text-white h-full">
-  <div
-    class="flex flex-col md:flex-row md:justify-evenly gap-10 md:gap-20 mb-10 md:mb-30"
-  >
+<div class="min-h-[80svh]">
+  <div class="p-4 md:max-w-2/3 mx-auto md:mt-20 text-white">
     <div
-      class="md:w-1/2 bg-gray-800/25 p-4 md:p-8 rounded-md border border-gray-700"
+      class="flex flex-col md:flex-row md:justify-evenly gap-10 md:gap-20 mb-10 md:mb-30"
     >
-      <h2 class="text-3xl mb-8 font-medium">Docker</h2>
+      <div
+        class="md:w-1/2 bg-gray-800/25 p-4 md:p-8 rounded-md border border-gray-700"
+      >
+        <h2 class="text-3xl mb-8 font-medium">Docker</h2>
 
-      <p class="mt-4 mb-8">
-        Start the container and expose port <code
-          class="bg-gray-900
+        <p class="mt-4 mb-8">
+          Start the container and expose port <code
+            class="bg-gray-900
           p-1
           rounded-sm">2525</code
-        >
-        (smtp) and <code class="bg-gray-900 p-1 rounded-sm">3000</code> (web):
-      </p>
+          >
+          (smtp) and <code class="bg-gray-900 p-1 rounded-sm">3000</code> (web):
+        </p>
 
-      <div class="bg-gray-950 p-4 rounded-sm shadow-md relative">
-        <pre class="overflow-x-auto"><code>{dockerCommand}</code></pre>
+        <div class="bg-gray-950 p-4 rounded-sm shadow-md relative">
+          <pre class="overflow-x-auto"><code>{dockerCommand}</code></pre>
 
-        <div class="absolute top-1 right-1">
-          <CopyButton content={dockerCommand} />
+          <div class="absolute top-1 right-1">
+            <CopyButton content={dockerCommand} />
+          </div>
         </div>
       </div>
-    </div>
 
-    <div
-      class="md:w-1/2 bg-gray-800/25 p-4 md:p-8 rounded-md border border-gray-700"
-    >
-      <h2 class="text-3xl mb-8 font-medium">Binary</h2>
-
-      <p class="mt-4 mb-8">
-        Download the latest binary from the <a
-          href="https://github.com/cars10/mailfang/releases"
-          class="text-primary"
-          target="_blank">GitHub releases</a
-        > page and run it:
-      </p>
-
-      <div class="bg-gray-950 p-4 rounded-sm shadow-md relative">
-        <pre class="overflow-x-auto"><code>{binaryCommand}</code></pre>
-
-        <div class="absolute top-1 right-1">
-          <CopyButton content={binaryCommand} />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="mb-20">
-    <p class="text-center">
-      Open the web ui at <a
-        href="http://localhost:3000"
-        class="text-primary"
-        target="_blank">http://localhost:3000</a
+      <div
+        class="md:w-1/2 bg-gray-800/25 p-4 md:p-8 rounded-md border border-gray-700"
       >
-      and start sending emails to
-      <code class="bg-gray-900 p-1 rounded-sm">localhost:2525</code>.
-    </p>
+        <h2 class="text-3xl mb-8 font-medium">Binary</h2>
+
+        <p class="mt-4 mb-8">
+          Download the latest binary from the <a
+            href="https://github.com/cars10/mailfang/releases"
+            class="text-primary"
+            target="_blank">GitHub releases</a
+          > page and run it:
+        </p>
+
+        <div class="bg-gray-950 p-4 rounded-sm shadow-md relative">
+          <pre class="overflow-x-auto"><code>{binaryCommand}</code></pre>
+
+          <div class="absolute top-1 right-1">
+            <CopyButton content={binaryCommand} />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-20">
+      <p class="text-center">
+        Open the web ui at <a
+          href="http://localhost:3000"
+          class="text-primary"
+          target="_blank">http://localhost:3000</a
+        >
+        and start sending emails to
+        <code class="bg-gray-900 p-1 rounded-sm">localhost:2525</code>.
+      </p>
+    </div>
   </div>
 </div>
