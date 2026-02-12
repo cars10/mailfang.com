@@ -11,7 +11,7 @@ npm install
 # commit new version
 git add package.json
 git add package-lock.json
-git commit -am "bumps version to $VERSION"
+git commit -am "bumps version to $VERSION" || true
 
 git push
 
