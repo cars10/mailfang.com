@@ -10,7 +10,7 @@ const terminalOutput = `$ docker run -p 3000:3000 -p 2525:2525 cars10/mailfang:l
 INFO  [main] Database connected
 INFO  [main] Database migrations completed
 INFO  [web] Web server listening on 0.0.0.0:3000 
-INFO  [smtp] SMTP server listening on 0.0.0.0:2525                             
+INFO  [smtp] SMTP server listening on 0.0.0.0:2525          
 INFO  [main] MailFang is ready!`
 ---
 
@@ -59,10 +59,13 @@ INFO  [main] MailFang is ready!`
     </h2>
 
     <p class="text-2xl font-light leading-12 text-gray-300 max-w-full">
-      Instead of testing your emails by sending them to an external service (or
-      even worse, to <span class="italic">real</span> users) you can test them on
-      your own infrastructure. Run Mail<span class="font-normal">Fang</span> on your
-      hardware and validate your emails before they reach your users.
+      Stop testing emails by sending them to external services (or worse, to <span
+        class="italic">real</span
+      >
+      users). Mail<span class="font-normal">Fang</span> allows you to validate your
+      emails directly on your own infrastructure, keeping your data private and your
+      workflow fast. <br /> Run it on your hardware to catch bugs and perfect your
+      templates before they ever reach an inbox.
     </p>
 
     <TypewriterReveal text={terminalOutput} charDelay={20} />
