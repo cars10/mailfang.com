@@ -1,9 +1,7 @@
-@import '@fontsource-variable/roboto/wght.css';
-@import '@fontsource-variable/roboto/wght-italic.css';
 @import 'tailwindcss';
 
 @theme {
-  --default-font-family: 'Roboto Variable', sans-serif;
+  --default-font-family: var(--font-roboto);
   --default-font-size: 15px;
   --default-font-optical-sizing: auto;
   --default-font-weight: 400;
@@ -21,6 +19,7 @@ body {
 }
 
 body {
+  font-family: var(--default-font-family);
   background: linear-gradient(to bottom, #09161a 0%, #202e32 100%);
 }
 
