@@ -1,0 +1,7 @@
+---
+const { size = '3xl', mdSize = size } = Astro.props
+---
+
+<h2 class={`text-${size} md:text-${mdSize} border-secondary border-l-4 px-4`}>
+  <slot />
+</h2>

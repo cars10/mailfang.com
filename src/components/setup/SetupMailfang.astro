@@ -1,0 +1,49 @@
+---
+import CodeCard from '../shared/CodeCard.astro'
+import Heading from '../shared/Heading.astro'
+
+const dockerCommand = `docker run --name mailfang \r
+           -p 3000:3000 \r
+           -p 2525:2525 \r
+           cars10/mailfang:latest`
+
+const binaryCommand = `./mailfang`
+---
+
+<div class="flex flex-col gap-10">
+  <Heading size="3xl" mdSize="4xl">
+    Setup Mail<span class="font-bold">Fang</span>
+  </Heading>
+
+  <div class="flex flex-col md:flex-row gap-10">
+    <div class="min-w-0 flex-1">
+      <CodeCard title="Docker" code={dockerCommand} className="h-full">
+        Start the container and expose port <code
+          class="bg-gray-900
+            p-1
+            rounded-sm">2525</code
+        >
+        (smtp) and <code class="bg-gray-900 p-1 rounded-sm">3000</code> (web):
+      </CodeCard>
+    </div>
+
+    <div class="min-w-0 flex-1">
+      <CodeCard title="Binary" code={binaryCommand} className="h-full">
+        Download the binary from the <a
+          href="https://github.com/cars10/mailfang/releases"
+          class="text-primary"
+          target="_blank">GitHub releases</a
+        > page and run it:
+      </CodeCard>
+    </div>
+  </div>
+
+  <p class="text-center">
+    Open the web ui at <a
+      href="http://localhost:3000"
+      class="text-primary"
+      target="_blank">http://localhost:3000</a
+    >
+    and start sending emails!
+  </p>
+</div>

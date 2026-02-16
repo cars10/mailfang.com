@@ -1,5 +1,7 @@
 ---
-import TypewriterReveal from './TypewriterReveal.astro'
+import TypewriterReveal from './shared/TypewriterReveal.astro'
+import Heading from './shared/Heading.astro'
+
 const demoHost =
   import.meta.env.NODE_ENV === 'development'
     ? 'http://localhost:5173'
@@ -30,7 +32,7 @@ INFO  [main] MailFang is ready!`
     </p>
 
     <div class="flex flex-row gap-4">
-      <a href="/quickstart" class="btn btn-secondary"> Quickstart </a>
+      <a href="/setup" class="btn btn-secondary">Setup</a>
       <a
         href="https://github.com/cars10/mailfang"
         class="btn btn-dull"
@@ -54,9 +56,9 @@ INFO  [main] MailFang is ready!`
   <section
     class="p-4 md:p-0 mx-auto md:w-2/5 md:mt-30 text-white flex flex-col justify-between md:justify-normal gap-18"
   >
-    <h2 class="text-3xl md:text-5xl border-secondary border-l-4 px-4">
+    <Heading size="3xl" mdSize="5xl">
       Why use Mail<span class="font-bold">Fang</span>?
-    </h2>
+    </Heading>
 
     <p class="text-2xl font-light leading-12 text-gray-300 max-w-full">
       Stop testing emails by sending them to external services (or worse, to <span
@@ -71,7 +73,7 @@ INFO  [main] MailFang is ready!`
     <TypewriterReveal text={terminalOutput} charDelay={20} />
 
     <div>
-      <a href="/quickstart" class="btn btn-secondary">Quickstart</a>
+      <a href="/setup" class="btn btn-secondary">Setup</a>
     </div>
   </section>
 </div>

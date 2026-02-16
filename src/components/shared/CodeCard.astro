@@ -1,0 +1,22 @@
+---
+const { title, code, className = '' } = Astro.props
+import CopyButton from './CopyButton.astro'
+---
+
+<div
+  class={`bg-gray-800/25 p-4 md:p-8 rounded-md border border-gray-700 ${className}`}
+>
+  <h2 class="text-3xl mb-8 font-medium">{title}</h2>
+
+  <p class="mt-4 mb-8">
+    <slot />
+  </p>
+
+  <div class="bg-gray-950 p-4 rounded-sm shadow-md relative">
+    <pre class="overflow-x-auto"><code>{code}</code></pre>
+
+    <div class="absolute top-1 right-1">
+      <CopyButton content={code} />
+    </div>
+  </div>
+</div>

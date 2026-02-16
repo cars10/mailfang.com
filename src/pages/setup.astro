@@ -1,0 +1,26 @@
+---
+import SetupMailfang from '../components/setup/SetupMailfang.astro'
+import SendEmails from '../components/setup/SendEmails.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout>
+  <div class="p-4 md:max-w-2/3 mx-auto md:mt-20 text-white">
+    <div class="mb-40">
+      <SetupMailfang />
+    </div>
+    <div class="mb-20">
+      <SendEmails />
+    </div>
+
+    <div class="mb-20">
+      <p class="text-center">
+        For more information and available configuration options, please refer
+        to the <a
+          href="https://github.com/cars10/mailfang?tab=readme-ov-file#configuration"
+          class="text-primary">github README</a
+        >.
+      </p>
+    </div>
+  </div>
+</Layout>

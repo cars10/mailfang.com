@@ -1,0 +1,89 @@
+---
+import CodeCard from '../shared/CodeCard.astro'
+import Heading from '../shared/Heading.astro'
+
+const actionMailer = `config.action_mailer.smtp_settings = {
+  address: "127.0.0.1",
+  port:    2525,
+  enable_starttls: false
+}`
+
+const phpLaravel = `MAIL_MAILER=smtp
+MAIL_HOST=127.0.0.1
+MAIL_PORT=2525
+MAIL_ENCRYPTION=null`
+
+const pyhtonDjanog = `EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = '127.0.0.1'
+EMAIL_PORT = 2525
+EMAIL_USE_TLS = False`
+
+const nodeMailer = `let transporter = nodemailer.createTransport({
+  host: "127.0.0.1",
+  port: 2525,
+  secure: false
+});`
+
+const swaksCommand = `swaks --to recipient@example.com
+      --from sender@example.com
+      --server 0.0.0.0:2525
+      --header "From: sender@example.com"
+      --header "To: recipient@example.com"
+      --header "Subject: Test Email"
+      --body "This is a plain text message."`
+---
+
+<div class="flex flex-col gap-10">
+  <Heading size="3xl" mdSize="4xl"> Sending emails </Heading>
+
+  <p class="text-gray-300">
+    Configure your app to send emails to
+    <code class="bg-gray-900 p-1 rounded-sm">localhost:2525</code>. The details
+    will be different depending on the framework you're using, here are some
+    examples:
+  </p>
+
+  <div class="flex flex-col md:flex-row gap-10">
+    <div class="min-w-0 flex-1">
+      <CodeCard
+        title="Rails ActionMailer"
+        code={actionMailer}
+        className="h-full"
+      >
+        <code class="bg-gray-900 p-1 rounded-sm break-all">
+          config/environments/development.rb</code
+        >:
+      </CodeCard>
+    </div>
+
+    <div class="min-w-0 flex-1">
+      <CodeCard title="PHP / Laravel" code={phpLaravel} className="h-full">
+        <code class="bg-gray-900 p-1 rounded-sm">.env</code>:
+      </CodeCard>
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row gap-10">
+    <div class="min-w-0 flex-1">
+      <CodeCard title="Python / Django" code={pyhtonDjanog} className="h-full">
+        <code class="bg-gray-900 p-1 rounded-sm">settings.py</code>:
+      </CodeCard>
+    </div>
+
+    <div class="min-w-0 flex-1">
+      <CodeCard
+        title="Node.js / Nodemailer"
+        code={nodeMailer}
+        className="h-full"
+      >
+        <code class="bg-gray-900 p-1 rounded-sm">.env</code>:
+      </CodeCard>
+    </div>
+  </div>
+
+  <CodeCard title="Swaks" code={swaksCommand}>
+    For testing, you can also use <code class="bg-gray-900 p-1 rounded-sm"
+      >swaks</code
+    > on the command line to send emails:
+  </CodeCard>
+</div>
