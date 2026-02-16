@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+@import '@fontsource-variable/roboto/wght.css';
+@import '@fontsource-variable/roboto/wght-italic.css';
 @import 'tailwindcss';
 
 @theme {
-  --default-font-family: 'Roboto', sans-serif;
+  --default-font-family: 'Roboto Variable', sans-serif;
   --default-font-size: 15px;
   --default-font-optical-sizing: auto;
   --default-font-weight: 400;
