@@ -24,12 +24,12 @@ const nodeMailer = `let transporter = nodemailer.createTransport({
   secure: false
 });`
 
-const swaksCommand = `swaks --to recipient@example.com
-      --from sender@example.com
-      --server 0.0.0.0:2525
-      --header "From: sender@example.com"
-      --header "To: recipient@example.com"
-      --header "Subject: Test Email"
+const swaksCommand = `swaks --to recipient@example.com \\
+      --from sender@example.com \\
+      --server 0.0.0.0:2525 \\
+      --header "From: sender@example.com" \\
+      --header "To: recipient@example.com" \\
+      --header "Subject: Test Email" \\
       --body "This is a plain text message."`
 ---
 

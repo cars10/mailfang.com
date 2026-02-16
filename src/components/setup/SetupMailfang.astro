@@ -2,12 +2,13 @@
 import CodeCard from '../shared/CodeCard.astro'
 import Heading from '../shared/Heading.astro'
 
-const dockerCommand = `docker run --name mailfang \r
-           -p 3000:3000 \r
-           -p 2525:2525 \r
+const dockerCommand = `docker run --name mailfang \\
+           -p 3000:3000 \\
+           -p 2525:2525 \\
            cars10/mailfang:latest`
 
-const binaryCommand = `./mailfang`
+const binaryCommand = `chmod +x ./mailfang-linux-amd64
+./mailfang-linux-amd64`
 ---
 
 <div class="flex flex-col gap-10">
