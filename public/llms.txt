@@ -1,0 +1,37 @@
+# MailFang
+
+MailFang is an email testing tool that provides a local SMTP server and a modern web UI to view, inspect, and debug emails during development, in sandboxes, or in staging—without sending messages to external services or real users.
+
+## What MailFang does
+
+- Runs an SMTP server (default port 2525) that accepts mail from your application.
+- Stores received emails in a local SQLite database with optional persistence (e.g. Docker volume or configurable path).
+- Serves a web UI (default port 3000) where you can:
+  - Browse and search emails with field-based search (e.g. subject:, from:, recipient:, text:, html:, attachment:).
+  - View rendered HTML, plain text, raw RFC 822 source, and headers.
+  - Inspect and download attachments (inline and regular).
+  - Preview emails in different viewport sizes (e.g. mobile, tablet, desktop) to test responsive layouts.
+  - Toggle whether remote content (images, scripts, etc.) is loaded; by default the UI blocks remote content via Content-Security-Policy for safety.
+- Pushes real-time updates to the UI over WebSockets when new mail arrives or when emails are read or deleted, so you see changes immediately without refreshing.
+
+## Problems it solves
+
+- Avoids sending test emails to external providers or real users, keeping data on your own infrastructure and reducing cost and risk.
+- Lets you validate content, templates, and behavior locally or in staging before anything reaches production or real inboxes.
+- Gives a single, consistent way to capture and inspect mail across frameworks (e.g. Rails, Laravel, Django, Node/Nodemailer) and tools (e.g. swaks) by pointing SMTP at one address and port.
+- Reduces reliance on third-party mail APIs or shared test inboxes; you run and control the tool yourself.
+
+## Why MailFang stands out (advantages over similar tools)
+
+- Modern tech stack: Rust backend (Axum, async), Vue 3 + Vite frontend, SQLite. No legacy runtime or heavy language-specific ecosystem; the server is a single, fast binary.
+- Realtime experience: WebSockets push new mail and UI state changes instantly. You don’t need to poll or refresh to see new messages.
+- Rich, structured search: Query by subject, sender, recipient, body text, HTML content, and attachment filename (e.g. subject:password from:no-reply attachment:invoice.pdf), not just free-text search.
+- Responsive preview: Preview emails in multiple viewport presets (e.g. mobile, tablet, desktop) so you can check how templates look on different screen sizes.
+- Security by default: Rendered HTML is shown with a strict Content-Security-Policy that blocks remote content (images, scripts, etc.) unless you explicitly allow it, reducing tracking and accidental requests to external servers.
+- Standards-oriented SMTP: Implements RFC 5321 and supports common auth methods (PLAIN, LOGIN, CRAM-MD5) and configurable connection limits, so it fits into real-world dev and staging setups.
+- Simple deployment: Run via Docker (single image, Alpine-based) or a single static binary; no separate app server or database to install. Optional SMTP auth and persistent SQLite storage via env or CLI.
+- Easily configurable: All options (SMTP host/port, web host, database path, SMTP auth, max connections, etc.) can be set via CLI arguments or environment variables, so it fits into scripts, Docker, and CI without config files.
+- Full email inspection: Headers, attachments (with inline handling), raw .eml, and rendered HTML/text in one place, with optional remote-content loading for when you need it.
+- Self-hosted and private: Everything runs on your hardware; no dependency on a hosted SaaS or external mail service for testing.
+
+For setup, configuration, and examples (Docker, binary, Rails, Laravel, Django, Nodemailer, swaks), see the project’s GitHub repository and the Setup page on this site.
