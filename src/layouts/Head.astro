@@ -2,10 +2,22 @@
 import { Font } from 'astro:assets'
 import ViewImage from '../assets/images/view.png'
 
+export interface Props {
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+}
+
 const {
-  title = 'MailFang',
-  description = 'MailFang is your new email testing tool',
+  title = 'MailFang - Your new email testing tool',
+  description = 'MailFang is a fast, reliable, and user-friendly email testing tool for developers to catch, inspect, and debug outgoing emails.',
+  keywords = 'email testing, smtp server, mailcatcher, maildev, mock smtp, email debugger, developer tools',
+  image = ViewImage.src,
 } = Astro.props
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const resolvedImageWithDomain = new URL(image, Astro.site).toString()
 ---
 
 <meta charset="UTF-8" />
@@ -20,14 +32,31 @@ const {
 
 <meta name="generator" content={Astro.generator} />
 
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
 <title>{title}</title>
+<meta name="title" content={title} />
 <meta name="description" content={description} />
-<meta property="og:title" content={title} />
+<meta name="keywords" content={keywords} />
+
+<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://mailfang.com" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={ViewImage.src} />
-<meta property="og:image:alt" content="" />
+<meta property="og:image" content={resolvedImageWithDomain} />
+<meta property="og:image:alt" content="MailFang Email Testing Tool" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={resolvedImageWithDomain} />
+
+<!-- Favicon and App Icons -->
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
