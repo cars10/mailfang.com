@@ -15,10 +15,9 @@ const { text, charDelay = 20 } = Astro.props
     class="typewriter-sizer font-mono select-none opacity-0 overflow-hidden"
     aria-hidden="true"
   >
-    <pre set:html={text} />
+    <pre set:html={text}></pre>
   </div>
-  <pre
-    class="overflow-x-auto absolute top-4 left-4 right-4 bottom-4 z-10"><code><span class="typewriter-output" aria-live="polite" /></code></pre>
+  <pre class="overflow-x-auto absolute top-4 left-4 right-4 bottom-4 z-10"><code><span class="typewriter-output" aria-live="polite"></span></code></pre>
 </div>
 
 <script>

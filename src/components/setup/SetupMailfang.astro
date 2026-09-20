@@ -19,32 +19,38 @@ const binaryCommand = `chmod +x ./mailfang-linux-amd64
   <div class="flex flex-col md:flex-row gap-10">
     <div class="min-w-0 flex-1">
       <CodeCard title="Docker" code={dockerCommand} className="h-full">
-        Start the container and expose port <code
+        Start the container and expose port{' '}
+        <code
           class="bg-gray-900
             p-1
-            rounded-sm">2525</code
+            rounded-sm"
         >
+          2525
+        </code>
         (smtp) and <code class="bg-gray-900 p-1 rounded-sm">3000</code> (web):
       </CodeCard>
     </div>
 
     <div class="min-w-0 flex-1">
       <CodeCard title="Binary" code={binaryCommand} className="h-full">
-        Download the binary from the <a
+        Download the binary from the{' '}
+        <a
           href="https://github.com/cars10/mailfang/releases"
           class="text-primary"
-          target="_blank">GitHub releases</a
-        > page and run it:
+          target="_blank"
+        >
+          GitHub releases
+        </a>{' '}
+        page and run it:
       </CodeCard>
     </div>
   </div>
 
   <p class="text-center">
-    Open the web ui at <a
-      href="http://localhost:3000"
-      class="text-primary"
-      target="_blank">http://localhost:3000</a
-    >
+    Open the web ui at{' '}
+    <a href="http://localhost:3000" class="text-primary" target="_blank">
+      http://localhost:3000
+    </a>{' '}
     and start sending emails!
   </p>
 </div>

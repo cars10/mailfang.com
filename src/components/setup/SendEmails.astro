@@ -34,10 +34,13 @@ const swaksCommand = `swaks --to recipient@example.com \\
 ---
 
 <div class="flex flex-col gap-10">
-  <Heading size="3xl" mdSize="4xl"> Sending emails </Heading>
+  <Heading size="3xl" mdSize="4xl">
+    {' '}
+    Sending emails{' '}
+  </Heading>
 
   <p class="text-gray-300">
-    Configure your app to send emails to
+    Configure your app to send emails to{' '}
     <code class="bg-gray-900 p-1 rounded-sm">localhost:2525</code>. The details
     will be different depending on the framework you're using, here are some
     examples:
@@ -51,8 +54,9 @@ const swaksCommand = `swaks --to recipient@example.com \\
         className="h-full"
       >
         <code class="bg-gray-900 p-1 rounded-sm break-all">
-          config/environments/development.rb</code
-        >:
+          config/environments/development.rb
+        </code>
+        :
       </CodeCard>
     </div>
 
@@ -82,8 +86,8 @@ const swaksCommand = `swaks --to recipient@example.com \\
   </div>
 
   <CodeCard title="Swaks" code={swaksCommand}>
-    For testing, you can also use <code class="bg-gray-900 p-1 rounded-sm"
-      >swaks</code
-    > on the command line to send emails:
+    For testing, you can also use{' '}
+    <code class="bg-gray-900 p-1 rounded-sm">swaks</code> on the command line to
+    send emails:
   </CodeCard>
 </div>
