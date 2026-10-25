@@ -2,16 +2,15 @@
 const year = new Date().getFullYear()
 ---
 
-<div
-  role="contentinfo"
-  class="border-t border-gray-800 p-4 bg-black/40 text-white text-center py-10"
->
+<footer class="border-t border-gray-800 px-4 py-10 bg-black/40 text-gray-300 text-center text-sm leading-7">
   © {year} Carsten König <br />
-  <a href="/imprint" class="text-primary">
+  <a href="/imprint" class="link">
     Imprint
   </a>
-  {' | '}
-  <a href="https://github.com/cars10/mailfang" class="text-primary">
+  <span class="mx-1.5 text-gray-500" aria-hidden="true">
+    ·
+  </span>
+  <a href="https://github.com/cars10/mailfang" class="link">
     GitHub
   </a>
-</div>
+</footer>

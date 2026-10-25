@@ -33,27 +33,23 @@ const swaksCommand = `swaks --to recipient@example.com \\
       --body "This is a plain text message."`
 ---
 
-<div class="flex flex-col gap-10">
-  <Heading size="3xl" mdSize="4xl">
-    {' '}
-    Sending emails{' '}
-  </Heading>
+<section class="flex flex-col gap-8">
+  <Heading>Sending emails</Heading>
 
-  <p class="text-gray-300">
+  <p class="text-gray-300 leading-relaxed">
     Configure your app to send emails to{' '}
-    <code class="bg-gray-900 p-1 rounded-sm">localhost:2525</code>. The details
-    will be different depending on the framework you're using, here are some
-    examples:
+    <code class="code-inline">localhost:2525</code>. The details will be
+    different depending on the framework you're using, here are some examples:
   </p>
 
-  <div class="flex flex-col md:flex-row gap-10">
+  <div class="flex flex-col md:flex-row gap-6">
     <div class="min-w-0 flex-1">
       <CodeCard
         title="Rails ActionMailer"
         code={actionMailer}
         className="h-full"
       >
-        <code class="bg-gray-900 p-1 rounded-sm break-all">
+        <code class="code-inline break-all">
           config/environments/development.rb
         </code>
         :
@@ -62,15 +58,15 @@ const swaksCommand = `swaks --to recipient@example.com \\
 
     <div class="min-w-0 flex-1">
       <CodeCard title="PHP / Laravel" code={phpLaravel} className="h-full">
-        <code class="bg-gray-900 p-1 rounded-sm">.env</code>:
+        <code class="code-inline">.env</code>:
       </CodeCard>
     </div>
   </div>
 
-  <div class="flex flex-col md:flex-row gap-10">
+  <div class="flex flex-col md:flex-row gap-6">
     <div class="min-w-0 flex-1">
       <CodeCard title="Python / Django" code={pyhtonDjanog} className="h-full">
-        <code class="bg-gray-900 p-1 rounded-sm">settings.py</code>:
+        <code class="code-inline">settings.py</code>:
       </CodeCard>
     </div>
 
@@ -80,14 +76,13 @@ const swaksCommand = `swaks --to recipient@example.com \\
         code={nodeMailer}
         className="h-full"
       >
-        <code class="bg-gray-900 p-1 rounded-sm">.env</code>:
+        <code class="code-inline">mailer.js</code>:
       </CodeCard>
     </div>
   </div>
 
   <CodeCard title="Swaks" code={swaksCommand}>
-    For testing, you can also use{' '}
-    <code class="bg-gray-900 p-1 rounded-sm">swaks</code> on the command line to
-    send emails:
+    For testing, you can also use <code class="code-inline">swaks</code> on the
+    command line to send emails:
   </CodeCard>
-</div>
+</section>

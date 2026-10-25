@@ -11,23 +11,17 @@ const binaryCommand = `chmod +x ./mailfang-linux-amd64
 ./mailfang-linux-amd64`
 ---
 
-<div class="flex flex-col gap-10">
-  <Heading size="3xl" mdSize="4xl">
-    Setup Mail<span class="font-bold">Fang</span>
+<section class="flex flex-col gap-8">
+  <Heading as="h1">
+    Set up Mail<span class="font-bold">Fang</span>
   </Heading>
 
-  <div class="flex flex-col md:flex-row gap-10">
+  <div class="flex flex-col md:flex-row gap-6">
     <div class="min-w-0 flex-1">
       <CodeCard title="Docker" code={dockerCommand} className="h-full">
         Start the container and expose port{' '}
-        <code
-          class="bg-gray-900
-            p-1
-            rounded-sm"
-        >
-          2525
-        </code>
-        (smtp) and <code class="bg-gray-900 p-1 rounded-sm">3000</code> (web):
+        <code class="code-inline">2525</code>
+        (smtp) and <code class="code-inline">3000</code> (web):
       </CodeCard>
     </div>
 
@@ -36,7 +30,7 @@ const binaryCommand = `chmod +x ./mailfang-linux-amd64
         Download the binary from the{' '}
         <a
           href="https://github.com/cars10/mailfang/releases"
-          class="text-primary"
+          class="link"
           target="_blank"
         >
           GitHub releases
@@ -46,11 +40,11 @@ const binaryCommand = `chmod +x ./mailfang-linux-amd64
     </div>
   </div>
 
-  <p class="text-center">
-    Open the web ui at{' '}
-    <a href="http://localhost:3000" class="text-primary" target="_blank">
+  <p class="text-center text-gray-300">
+    Open the web UI at{' '}
+    <a href="http://localhost:3000" class="link" target="_blank">
       http://localhost:3000
     </a>{' '}
     and start sending emails!
   </p>
-</div>
+</section>

@@ -2,26 +2,43 @@
 import ClipboardIcon from '../../assets/icons/clipboard.svg'
 import CheckIcon from '../../assets/icons/check.svg'
 
-const { content } = Astro.props
+const { content, label = 'Copy to clipboard' } = Astro.props
 ---
 
 <button
-  class="copy-button hover:bg-gray-700 hover:text-secondary-dark rounded-sm p-1 hover:cursor-pointer bg-gray-800"
+  type="button"
+  class="copy-button hover:bg-gray-700 hover:text-secondary transition-colors rounded-sm p-1.5 hover:cursor-pointer bg-gray-800 text-gray-300"
   data-content={content}
+  aria-label={label}
+  title="Copy"
 >
-  <ClipboardIcon width="24" height="24" class="h-6 clipboard-icon" />
-  <CheckIcon width="24" height="24" class="h-6 check-icon hidden" />
+  <ClipboardIcon
+    width="20"
+    height="20"
+    class="size-5 clipboard-icon"
+    aria-hidden="true"
+  />
+  <CheckIcon
+    width="20"
+    height="20"
+    class="size-5 check-icon hidden text-secondary"
+    aria-hidden="true"
+  />
+  <span class="sr-only copy-status" aria-live="polite"></span>
 </button>
 
 <script>
   const onClick = (button: HTMLButtonElement) => {
     const content = button.getAttribute('data-content') || ''
     navigator.clipboard.writeText(content)
+    const status = button.querySelector('.copy-status')
+    if (status) status.textContent = 'Copied'
     button.querySelector('.clipboard-icon')?.classList.add('hidden')
     button.querySelector('.check-icon')?.classList.remove('hidden')
     setTimeout(() => {
       button.querySelector('.clipboard-icon')?.classList.remove('hidden')
       button.querySelector('.check-icon')?.classList.add('hidden')
+      if (status) status.textContent = ''
     }, 2000)
   }
 

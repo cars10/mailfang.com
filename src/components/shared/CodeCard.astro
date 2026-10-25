@@ -4,19 +4,22 @@ import CopyButton from './CopyButton.astro'
 ---
 
 <div
-  class={`bg-gray-800/25 p-4 md:p-8 rounded-md border border-gray-700 ${className}`}
+  class={`flex flex-col bg-gray-800/25 p-5 md:p-8 rounded-md border border-gray-700/70 ${className}`}
 >
-  <h2 class="text-3xl mb-8 font-medium">{title}</h2>
+  <h3 class="text-2xl mb-3 font-medium">{title}</h3>
 
-  <p class="mt-4 mb-8">
+  <p class="mb-6 text-gray-300 leading-relaxed">
     <slot />
   </p>
 
-  <div class="bg-gray-950 p-4 rounded-sm shadow-md relative">
-    <pre class="overflow-x-auto"><code>{code}</code></pre>
+  <div class="bg-gray-950 rounded-sm shadow-md relative">
+    <pre
+      class="overflow-x-auto p-4 pr-14 text-sm leading-6"
+      translate="no"
+    ><code>{code}</code></pre>
 
-    <div class="absolute top-1 right-1">
-      <CopyButton content={code} />
+    <div class="absolute top-2 right-2">
+      <CopyButton content={code} label={`Copy ${title} snippet`} />
     </div>
   </div>
 </div>

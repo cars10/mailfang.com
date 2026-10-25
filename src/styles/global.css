@@ -6,7 +6,7 @@
   --default-font-optical-sizing: auto;
   --default-font-weight: 400;
   --default-font-style: normal;
-  --color-primary: var(--color-cyan-600);
+  --color-primary: var(--color-cyan-400);
   --color-secondary: oklch(0.87 0.16 88.8 / 1);
   --color-secondary-dark: oklch(0.73 0.15 88.08);
 }
@@ -18,21 +18,54 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  color-scheme: dark;
+  background-color: #202e32;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
   font-family: var(--default-font-family);
   background: linear-gradient(to bottom, #09161a 0%, #202e32 100%);
 }
 
+main {
+  flex: 1;
+}
+
+pre {
+  scrollbar-color: var(--color-gray-700) transparent;
+  scrollbar-width: thin;
+}
+
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-secondary;
+}
+
+/* film grain over the background gradient to break up banding */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+}
+
 .btn {
+  @apply inline-flex items-center justify-center;
   @apply rounded-sm;
-  @apply px-8 py-2;
-  @apply text-center;
+  @apply px-8;
   @apply hover:cursor-pointer;
   @apply shadow-md;
-  @apply transition-all;
-  @apply duration-300;
-  @apply font-normal;
-  @apply h-10;
+  @apply transition-colors;
+  @apply duration-200;
+  @apply font-medium;
+  @apply h-11;
 }
 
 .btn-secondary {
@@ -45,4 +78,18 @@ body {
   @apply bg-gray-700;
   @apply hover:bg-gray-800;
   @apply text-white;
+}
+
+.link {
+  @apply text-primary;
+  @apply underline-offset-4;
+  @apply hover:underline;
+}
+
+.code-inline {
+  @apply bg-gray-900;
+  @apply px-1.5 py-0.5;
+  @apply rounded-sm;
+  @apply font-mono;
+  @apply text-[0.9em];
 }
